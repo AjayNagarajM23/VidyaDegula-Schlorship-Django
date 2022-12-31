@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %} Form {% endblock title %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <h3 style="font-size: xxx-large ; text-align: center">STUDENT REGISTRATION FORM</h3>
+        <div class="container my-4 "
+             style="border-radius: 30px ; border: 6px solid goldenrod ; background-color: rgb(223,221,185) ; justify-content: center ; display: flex">
+            <form method="post" action="/afs" class="my-3">
+                {% csrf_token %}
+                <table class="my-3">
+                    <tr>
+                        <td>FIRST NAME</td>
+                        <td><input type="text" name="fname" maxlength="30"/></td>
+                    </tr>
+                    <tr>
+                        <td>LAST NAME</td>
+                        <td><input type="text" name="lname" maxlength="30"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>DATE OF BIRTH</td>
+                        <td>
+                            <label>
+                                <input type="date" name="dob">
+                            </label>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>EMAIL ID</td>
+                        <td><input type="text" name="mail" maxlength="100"/></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>MOBILE NUMBER</td>
+                        <td>
+                            <input type="text" name="phno" maxlength="10" placeholder="10 Digits"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>GENDER</td>
+                        <td>
+                            Male <input type="radio" name="Gender" value="Male"/>
+                            Female <input type="radio" name="Gender" value="Female"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>ADDRESS <br/><br/><br/></td>
+                        <td><textarea name="address" rows="4" cols="30"></textarea></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>CITY</td>
+                        <td><input type="text" name="city" maxlength="30"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>PIN CODE</td>
+                        <td><input type="text" name="code" maxlength="6" placeholder="(6 digit number)"/>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>STATE</td>
+                        <td><input type="text" name="state" maxlength="30"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>COUNTRY</td>
+                        <td><input type="text" name="country" value="India" readonly="readonly"/></td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="text-align: center; font-weight: bolder; padding-left: 20%">QUALIFICATION</td>
+                    </tr>
+
+                    <tr>
+                        <td>10th Marks :</td>
+                        <td><input type="text" name="per10" placeholder="Ex:0.0%"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>12th Marks :</td>
+                        <td><input type="text" name="per12" placeholder="Ex:0.0%"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>Bachelor CGPA :</td>
+                        <td><input type="text" name="bach" placeholder="Ex:0.00"/></td>
+                    </tr>
+                    <tr>
+                        <td>COURSES<br/>APPLIED FOR</td>
+                        <td>
+                            <label>
+                                <input type="text" name="crs" placeholder="Enter Current course" maxlength="30">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-success col-6 mx-auto d-grid gap-2">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    {% else %}
+        <div class="container my-5"
+             style="background-color: #ddffdd ; border-radius: 50% ; justify-content: center; display: flex">
+            <img src="/static/images/loginErr.png" alt="..." style="size: auto ; max-width: 100% ; border-radius: 50% ">
+        </div>
+    {% endif %}
+{% endblock body %}

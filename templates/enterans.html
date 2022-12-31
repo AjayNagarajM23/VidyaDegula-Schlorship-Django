@@ -1,0 +1,35 @@
+{% extends 'base.html' %}{% block title %}enterans{% endblock %}
+
+{% block body %}
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light" style="font-size: 70px; font-weight: bolder">Post New Announcement</h1>
+            </div>
+        </div>
+    </section>
+    <div class="container-sm" style="margin-bottom: 40px">
+        <form action="/enterans" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label"><b>Enter Announcement</b></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       name="announcement">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><b>Upload Picture</b></label>
+                <input type="file" class="form-control"
+                       name="photo">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><b>Enter About The Announcement</b></label>
+                <textarea type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          name="desc"></textarea>
+            </div>
+            <div style="display: flex; justify-content: center">
+                <button class="btn btn-success btn-lg">Post Announcement</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign In {% endblock title %}
+
+
+
+{% block body %}
+
+    <div class="wrapper">
+        <div class="logo">
+            <img src="/static/images/logo.png" alt="">
+        </div>
+        <div class="text-center mt-4 name">
+            Vidya Degula
+        </div>
+        <form class="p-3 mt-3" method="post" action="/signup">
+            {% csrf_token %}
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="username" id="userName" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="text" name="fname" placeholder="First Name">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="text" name="lname" placeholder="Last Name">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" placeholder="Password">
+            </div>
+            <button class="btn mt-3">Sign Up</button>
+        </form>
+        <div class="text-center fs-6">
+            Already Have An Account ?<a style="font-size: large" href="/signin">Sign In</a>
+        </div>
+    </div>
+
+{% endblock body %}

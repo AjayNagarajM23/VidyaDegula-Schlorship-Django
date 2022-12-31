@@ -1,0 +1,144 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %}
+
+
+{% block body %}
+    <div class="container" style="border-radius: 30px">
+        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                ></button>
+                <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                ></button>
+                <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="6000">
+                    <img src="/static/images/img1.png" class="d-block w-100" style="border-radius: 30px" alt=""/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="6000">
+                    <img src="/static/images/img2.png" class="d-block w-100" alt="..." style="border-radius: 30px"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="6000">
+                    <img src="/static/images/img1.png" class="d-block w-100" alt="..." style="border-radius: 30px"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 py-5" style="border:6px outset #4ac1f7; border-radius: 20px; margin-top: 30px">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/static/images/img1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                     width="700"
+                     height="500" loading="lazy" style="border-radius: 10%">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Main Building</h1>
+                <p class="lead">Main building for organising events for children and other functions. For more
+                    information contact us. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="/conus">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="bb7ob">Contact
+                            Us
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-5" style="border:6px outset #4ac1f7; border-radius: 20px; margin-top: 30px">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/static/images/img2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                     width="700"
+                     height="500" loading="lazy" style="border-radius: 10%">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Sujana Mantap</h1>
+                <p class="lead">A medium-sized hall for organising events and meetings. Max strength 50 people For
+                    booking and more info contact us</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="/conus">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="bb7ob">contact
+                            us
+                        </button>
+                    </a>
+                    <!--
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="c11lkn">Default
+                    </button>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-5"
+         style="border:6px outset #4ac1f7; border-radius: 20px; margin-top: 30px ; margin-bottom: 30px">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/static/images/img3.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                     width="700"
+                     height="500" loading="lazy" style="border-radius: 10%">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Scenery</h1>
+                <p class="lead">The site location is a blend of Spiritual, forest and peaceful.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="/conus">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" fdprocessedid="bb7ob">contact
+                            us
+                        </button>
+                    </a>
+                    <!--
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="c11lkn">Default
+                    </button>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
